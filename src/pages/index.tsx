@@ -12,7 +12,7 @@ import Head from "next/head";
 import React from "react";
 
 import { FaUser } from "react-icons/fa";
-import { colors } from "./theme/colors";
+import { colors } from "../theme/colors";
 
 const App: React.FC = () => {
   return (
