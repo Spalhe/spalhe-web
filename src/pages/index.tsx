@@ -9,44 +9,21 @@ import {
   Text,
 } from "@chakra-ui/react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 
 import { FaUser } from "react-icons/fa";
+import Header from "../components/Header";
 import { colors } from "../theme/colors";
 
 const App: React.FC = () => {
+  const { push } = useRouter();
+
   return (
     <Box color="white">
-      <Head>
-        <title>Spalhe - A Sua Nova Rede Social</title>
-      </Head>
-
       <Center>
         <Stack w="full" maxW="1200px">
-          <HStack display={["none", "flex"]} p="20px 0" justify="space-between">
-            <Image src="/logo.svg" w="40px" />
-
-            <HStack>
-              <Button
-                _hover={{ boxShadow: `0px 0px 30px  ${colors.primary}` }}
-                variant="ghost"
-              >
-                download
-              </Button>
-              <Button
-                _hover={{ boxShadow: `0px 0px 30px  ${colors.primary}` }}
-                variant="ghost"
-              >
-                termos de uso
-              </Button>
-              <Button
-                _hover={{ boxShadow: `0px 0px 30px  ${colors.primary}` }}
-                variant="ghost"
-              >
-                políticas de privacidade
-              </Button>
-            </HStack>
-          </HStack>
+          <Header title="Termos de Uso" />
 
           <Box pt={[30, "100px"]} textAlign="center">
             <Text fontWeight="600" fontSize={[20, "48px"]}>
@@ -70,6 +47,11 @@ const App: React.FC = () => {
                 p="30px"
                 borderRadius="50px"
                 _hover={{ boxShadow: `0px 0px 30px  ${colors.primary}` }}
+                onClick={() =>
+                  push(
+                    "https://play.google.com/store/apps/details?id=com.spalhe"
+                  )
+                }
               >
                 Comecar a usar!
               </Button>
