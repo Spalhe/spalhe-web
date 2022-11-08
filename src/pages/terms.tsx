@@ -9,7 +9,7 @@ const TermsPage: React.FC = () => {
         <Stack w="full" maxW="1200px">
           <Header title="Spalhe" />
 
-          <Text>
+          <Text color="white">
             <Text fontSize={24} fontWeight="bold" pb="10px">
               Acceptable use policy
             </Text>
