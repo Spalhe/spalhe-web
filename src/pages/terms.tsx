@@ -2,11 +2,9 @@ import { Box, Center, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import Header from "../components/Header";
 
-// import { Container } from './styles';
-
 const TermsPage: React.FC = () => {
   return (
-    <Box>
+    <Box color="white">
       <Center>
         <Stack w="full" maxW="1200px">
           <Header title="Spalhe" />
