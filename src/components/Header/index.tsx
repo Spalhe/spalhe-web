@@ -13,7 +13,12 @@ const Header: React.FC<Props> = ({ title }) => {
 
   return (
     <HStack display={["none", "flex"]} p="20px 0" justify="space-between">
-      <Image onClick={() => push("/")} src="/logo.svg" w="100px" />
+      <Image
+        cursor="pointer"
+        onClick={() => push("/")}
+        src="/logo-white.svg"
+        w="80px"
+      />
 
       <Head>
         <title>{title} - Spalhe Rede Social</title>
