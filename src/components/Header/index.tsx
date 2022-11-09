@@ -21,6 +21,10 @@ const Header: React.FC<Props> = ({ title }) => {
       />
 
       <Head>
+        <meta
+          name="google-site-verification"
+          content="NX8Bd_Rl7Mg2zBplaNCq34s7EY3COs_AlzaRbBPj6Rc"
+        />
         <title>{title} - Spalhe Rede Social</title>
       </Head>
 
