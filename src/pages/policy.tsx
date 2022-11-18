@@ -13,7 +13,7 @@ const TermsPage: React.FC = () => {
         textAlign="center"
         p="20px"
         alignSelf="center"
-        w={['full', 'full']}
+        w={['full', '800px']}
         bg="rgb(0,0,0,0.05)"
         borderRadius="4px"
       >
