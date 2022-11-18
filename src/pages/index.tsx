@@ -1,85 +1,45 @@
-import {
-  Box,
-  Button,
-  Center,
-  HStack,
-  Icon,
-  Image,
-  Stack,
-  Text,
-} from "@chakra-ui/react";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import React from "react";
-
-import { FaUser } from "react-icons/fa";
-import Header from "../components/Header";
-import { colors } from "../theme/colors";
+import { Box, Button, HStack, Image, Text } from '@chakra-ui/react'
+import Container from 'components/Container'
+import Footer from 'components/Footer'
+import React from 'react'
+import { colors } from 'theme/colors'
+import Header from '../components/Header'
 
 const App: React.FC = () => {
-  const { push } = useRouter();
-
   return (
-    <Box color="white">
-      <Center>
-        <Stack w="full" maxW="1200px">
-          <Header title="Termos de Uso" />
+    <Container>
+      <Header title="Rua Rede Social" />
 
-          <Box pt={[30, "100px"]} textAlign="center">
-            <Text fontWeight="600" fontSize={[20, "48px"]}>
-              Spalhe
-            </Text>
-            <Text mt={[20, "-40px"]} fontWeight="600" fontSize={[60, "108px"]}>
-              sua nova rede social
-            </Text>
+      <HStack>
+        <Box flex="1" pb="180px">
+          <Text fontSize={52} fontWeight="600">
+            Sua Nova Rede Social
+          </Text>
+          <Text>
+            Milhares de pessoas já estão usando! Venha conhecer o Spalhe agora
+            mesmo.
+          </Text>
+          <Text>Crie sua conta e faça parte da comunidade Spalhe.</Text>
 
-            <Stack
-              px={[10, 0]}
-              direction={["column", "row"]}
-              justify="center"
-              spacing="20px"
-              pt={["60px", "20px"]}
-            >
-              <Button
-                leftIcon={<Icon as={FaUser} />}
-                bg="white"
-                color="black"
-                p="30px"
-                borderRadius="50px"
-                _hover={{ boxShadow: `0px 0px 30px  ${colors.primary}` }}
-                onClick={() =>
-                  push(
-                    "https://play.google.com/store/apps/details?id=com.spalhe"
-                  )
-                }
-              >
-                Comecar a usar!
-              </Button>
-              <Button
-                variant="outline"
-                leftIcon={<Icon as={FaUser} />}
-                borderColor={colors.primary}
-                p="30px"
-                borderRadius="50px"
-                _hover={{ boxShadow: `0px 0px 30px  ${colors.primary}` }}
-              >
-                Conheca o Spalhe
-              </Button>
-            </Stack>
-          </Box>
-        </Stack>
-      </Center>
+          <HStack pt="50px">
+            <Button p="25px 70px" borderRadius="50px" bg={colors.primary}>
+              Baixar o Spalhe
+            </Button>
 
-      <Box
-        zIndex={-10}
-        position="absolute"
-        h="500px"
-        w="full"
-        bgImage="linear-gradient(to bottom, #ffffff00, #000000)"
-        bottom={0}
-      />
-    </Box>
-  );
-};
+            <Button p="30px" variant="text">
+              Conhecer o Spalhe
+            </Button>
+          </HStack>
+        </Box>
 
-export default App;
+        <Box>
+          <Image src="app.png" w="550px" />
+        </Box>
+      </HStack>
+
+      <Footer />
+    </Container>
+  )
+}
+
+export default App
