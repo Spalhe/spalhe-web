@@ -1,18 +1,25 @@
-import { Box, Button, HStack, Image, Text } from '@chakra-ui/react'
+import { Box, Button, HStack, Image, Stack, Text } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
 import React from 'react'
 
 const Footer: React.FC = () => {
+  const { push } = useRouter()
+
   return (
     <Box pt="100px" pb="20px">
-      <HStack justify="space-between">
-        <Box>
+      <Stack
+        justify="space-between"
+        align="center"
+        direction={['column', 'row']}
+      >
+        <Stack align={['center', 'start']} pb={['20px', 0]}>
           <Image cursor="pointer" src="/logo_white.svg" w="70px" />
-
           <Text pt="6px">Todos os Direitos Reservados</Text>
-        </Box>
+        </Stack>
 
         <HStack spacing="30px">
           <Button
+            onClick={() => push('/terms')}
             color="black"
             textDecor="underline"
             fontSize="12px"
@@ -21,6 +28,16 @@ const Footer: React.FC = () => {
             termos de uso
           </Button>
           <Button
+            onClick={() => push('/policy')}
+            color="black"
+            textDecor="underline"
+            fontSize="12px"
+            variant="link"
+          >
+            política de privacidade
+          </Button>
+          <Button
+            onClick={() => push('/about')}
             color="black"
             textDecor="underline"
             fontSize="12px"
@@ -28,24 +45,8 @@ const Footer: React.FC = () => {
           >
             sobre o app
           </Button>
-          <Button
-            color="black"
-            textDecor="underline"
-            fontSize="12px"
-            variant="link"
-          >
-            baixar
-          </Button>
-          <Button
-            color="black"
-            textDecor="underline"
-            fontSize="12px"
-            variant="link"
-          >
-            cookies
-          </Button>
         </HStack>
-      </HStack>
+      </Stack>
     </Box>
   )
 }

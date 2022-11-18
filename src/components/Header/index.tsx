@@ -12,7 +12,7 @@ const Header: React.FC<Props> = ({ title }) => {
   const { push } = useRouter()
 
   return (
-    <HStack display={['none', 'flex']} p="20px 0" justify="space-between">
+    <HStack p={['20px', '20px 0']} justify="space-between">
       <Image
         cursor="pointer"
         onClick={() => push('/')}
@@ -30,11 +30,11 @@ const Header: React.FC<Props> = ({ title }) => {
 
       <HStack>
         <Button
-          _hover={{ boxShadow: `0px 0px 30px  ${colors.primary}` }}
-          variant="ghost"
-          onClick={() => push('/terms')}
+          display={['none', 'flex']}
+          variant="text"
+          onClick={() => push('/about')}
         >
-          termos de uso
+          sobre o app
         </Button>
 
         <Button p="20px 40px" borderRadius="50px" bg={colors.primary}>
