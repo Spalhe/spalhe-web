@@ -8,7 +8,7 @@ import Header from '../components/Header'
 const App: React.FC = () => {
   return (
     <Container>
-      <Header title="Rua Rede Social" />
+      <Header title="Sua Rede Social" />
 
       <HStack>
         <Box flex="1" pb="180px">
