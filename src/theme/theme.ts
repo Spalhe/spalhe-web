@@ -10,7 +10,7 @@ const breakpoints = {
   '2xl': '96em',
 }
 export const theme = extendTheme({
+  ...global,
   colors: colors,
-  styles: global,
   breakpoints,
 })

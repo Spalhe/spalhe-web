@@ -37,7 +37,12 @@ const Header: React.FC<Props> = ({ title }) => {
           sobre o app
         </Button>
 
-        <Button p="20px 40px" borderRadius="50px" bg={colors.primary}>
+        <Button
+          onClick={() => push('/')}
+          p="20px 40px"
+          borderRadius="50px"
+          bg={colors.primary}
+        >
           Baixar o Spalhe
         </Button>
       </HStack>

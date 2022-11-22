@@ -1,15 +1,13 @@
-import { colors } from './colors'
-
 export const global = {
-  global: {
-    html: {
-      w: 'full',
-      h: 'full',
-    },
-    body: {
-      w: 'full',
-      h: 'full',
-      bg: colors.background,
+  styles: {
+    global: {
+      'html, body': {
+        bg: 'white',
+        h: 'full',
+      },
+      '#__next': {
+        h: 'full',
+      },
     },
   },
 }
