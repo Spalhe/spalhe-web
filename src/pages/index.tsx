@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Icon, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Icon, Image, Stack, Text } from '@chakra-ui/react'
 import Container from 'components/Container'
 import Footer from 'components/Footer'
 import React from 'react'
@@ -22,7 +22,7 @@ const App: React.FC = () => {
           </Text>
           <Text>crie sua conta e faça parte da comunidade Spalhe.</Text>
 
-          <HStack pt="50px">
+          <Stack pt="50px" direction={['column', 'row']}>
             <Button
               onClick={() =>
                 window.open(
@@ -66,7 +66,7 @@ const App: React.FC = () => {
             >
               baixar para Android
             </Button>
-          </HStack>
+          </Stack>
         </Box>
 
         <Box>

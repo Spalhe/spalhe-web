@@ -7,12 +7,6 @@ export default class Document extends NextDocument {
       <Html lang="pt_BR">
         <Head />
         <body>
-          <script
-            type="text/javascript"
-            src="https://widget.freshworks.com/widgets/151000001150.js"
-            async
-            defer
-          ></script>
           <ColorModeScript initialColorMode="light" />
           <Main />
           <NextScript />
