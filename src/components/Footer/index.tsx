@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
       >
         <Stack align={['center', 'start']} pb={['20px', 0]}>
           <Image cursor="pointer" src="/logo_white.svg" w="70px" />
-          <Text pt="6px">Todos os Direitos Reservados</Text>
+          <Text pt="6px">Copyrigth © 2023</Text>
         </Stack>
 
         <HStack spacing="30px">
