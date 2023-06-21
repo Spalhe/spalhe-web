@@ -65,6 +65,7 @@ const Username: React.FC = () => {
                 left="115px"
                 right="0"
                 border="3px solid white"
+                objectFit="cover"
               />
             </Box>
 
