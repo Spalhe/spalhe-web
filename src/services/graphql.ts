@@ -6,7 +6,8 @@ export type Identifier = {
   subscriptionkey: string
 }
 
-export const api_url = 'https://api.spalhe.com'
+export const api_url =
+  'https://wnz425akfuc7utljzwljiqud6y0wpkiq.lambda-url.us-east-1.on.aws'
 
 export class GraphqlClient {
   readonly client: ApolloClient<any>
