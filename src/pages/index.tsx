@@ -1,26 +1,104 @@
-import { Box, Button, Icon, Image, Stack, Text } from '@chakra-ui/react'
+import {
+  Avatar,
+  Box,
+  Button,
+  HStack,
+  Icon,
+  Image,
+  Stack,
+  Text,
+} from '@chakra-ui/react'
 import Container from 'components/Container'
 import Footer from 'components/Footer'
 import React from 'react'
 import Header from '../components/Header'
+import { PiShootingStarDuotone } from 'react-icons/pi'
+import { FaStar } from 'react-icons/fa'
 
 import { IoLogoAppleAppstore, IoLogoGooglePlaystore } from 'react-icons/io5'
+import { usersAvatars } from '../constants/avatar'
 
 const App: React.FC = () => {
   return (
     <Container>
       <Header title="Sua Rede Social" />
 
-      <Stack direction={['column', 'row']} align="center">
-        <Box flex="1" pb={[0, '100px']} px={[10, '70px']}>
-          <Text fontSize="80px" lineHeight="80px" fontWeight="500">
-            sua nova <b>rede social</b>
+      <Stack
+        direction={['column', 'row']}
+        align="center"
+        justify="space-between"
+        px="30px"
+        pt={['20px', '0']}
+      >
+        <Box flex="1">
+          <HStack pb="10px">
+            <HStack
+              fontSize="12px"
+              borderRadius="100px"
+              bg="#ffc1072b"
+              p="6px 14px"
+            >
+              <Icon as={PiShootingStarDuotone} fontSize="20px" color="black" />
+              <Text fontWeight="700" color="black">
+                Seja um dos primeiros a usar o Spalhe
+              </Text>
+            </HStack>
+          </HStack>
+
+          <Text
+            fontSize={['50px', '80px']}
+            lineHeight={['58px', '80px']}
+            fontWeight="500"
+          >
+            Sua nova
+            <b> Rede Social</b> favorita 🥰
           </Text>
-          <Text pt="30px">
-            milhares de pessoas já estão usando! venha conhecer o Spalhe agora
-            mesmo.
+
+          <Text pt="10px" opacity={0.7}>
+            Milhares de pessoas já estão usando o Spalhe, venha conhecer agora
+            mesmo!
           </Text>
-          <Text>crie sua conta e faça parte da comunidade Spalhe.</Text>
+
+          <HStack pt="20px">
+            <HStack spacing="0">
+              <Avatar
+                border="2px solid white"
+                src={usersAvatars[0]}
+                w="32px"
+                h="32px"
+              />
+              <Avatar
+                border="2px solid white"
+                src={usersAvatars[1]}
+                w="32px"
+                h="32px"
+                ml="-10px"
+              />
+              <Avatar
+                border="2px solid white"
+                src={usersAvatars[2]}
+                w="32px"
+                h="32px"
+                ml="-10px"
+              />
+            </HStack>
+
+            <HStack spacing="5px">
+              <Icon as={FaStar} fontSize="18px" color="yellow.400" />
+              <Icon as={FaStar} fontSize="18px" color="yellow.400" />
+              <Icon as={FaStar} fontSize="18px" color="yellow.400" />
+              <Icon as={FaStar} fontSize="18px" color="yellow.400" />
+              <Icon as={FaStar} fontSize="18px" color="yellow.400" />
+            </HStack>
+          </HStack>
+
+          <HStack pt="50px" display={['flex', 'none']}>
+            <Image
+              src={'/images/feature1.png'}
+              h={['full', '650px']}
+              objectFit="contain"
+            />
+          </HStack>
 
           <Stack pt="50px" direction={['column', 'row']}>
             <Button
@@ -34,12 +112,8 @@ const App: React.FC = () => {
               leftIcon={<Icon fontSize={26} as={IoLogoAppleAppstore} />}
               borderRadius="50px"
               bg="#000"
-              _hover={{
-                bg: '#222',
-              }}
-              _active={{
-                bg: '#333',
-              }}
+              _hover={{ bg: '#222' }}
+              _active={{ bg: '#333' }}
               color="white"
             >
               baixar para iOS
@@ -69,18 +143,13 @@ const App: React.FC = () => {
           </Stack>
         </Box>
 
-        <Box>
+        <HStack flex={1} display={['none', 'flex']} justify="center">
           <Image
-            display={['none', 'block']}
-            src={'app.png'}
-            w={['full', '550px']}
+            src={'/images/feature1.png'}
+            h={['full', '650px']}
+            objectFit="contain"
           />
-          <Image
-            display={['block', 'none']}
-            src={'images/profile.png'}
-            w={['full', '550px']}
-          />
-        </Box>
+        </HStack>
       </Stack>
 
       <Footer />

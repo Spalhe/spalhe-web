@@ -5,7 +5,9 @@ const Container: React.FC<any> = ({ children }) => {
   return (
     <Box w={['fit-content', 'full']}>
       <Center>
-        <Stack maxW="1200px">{children}</Stack>
+        <Stack w={['full', '1120px']} maxW={['full', '1120px']}>
+          {children}
+        </Stack>
       </Center>
     </Box>
   )
