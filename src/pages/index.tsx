@@ -27,7 +27,7 @@ const App: React.FC = () => {
         direction={['column', 'row']}
         align="center"
         justify="space-between"
-        px="30px"
+        px={['30px', 0]}
         pt={['20px', '0']}
       >
         <Box flex="1">
