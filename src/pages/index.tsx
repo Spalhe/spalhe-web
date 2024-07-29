@@ -97,6 +97,7 @@ const App: React.FC = () => {
               src={'/images/feature1.png'}
               h={['full', '650px']}
               objectFit="contain"
+              __css={{ imageRendering: 'optimizeQuality' }}
             />
           </HStack>
 
@@ -148,6 +149,7 @@ const App: React.FC = () => {
             src={'/images/feature1.png'}
             h={['full', '650px']}
             objectFit="contain"
+            __css={{ imageRendering: 'optimizeQuality' }}
           />
         </HStack>
       </Stack>
