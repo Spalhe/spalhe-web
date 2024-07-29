@@ -13,8 +13,10 @@ const Footer: React.FC = () => {
         direction={['column', 'row']}
       >
         <Stack align={['center', 'start']} pb={['20px', 0]}>
-          <Image cursor="pointer" src="/logo_white.svg" w="70px" />
-          <Text pt="6px">Copyrigth © 2023</Text>
+          <Image cursor="pointer" src="/logo.svg" w="80px" />
+          <Text fontSize="12px" pt="6px">
+            Copyrigth © 2024
+          </Text>
         </Stack>
 
         <HStack spacing="30px">

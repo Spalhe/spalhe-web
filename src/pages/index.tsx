@@ -50,8 +50,8 @@ const App: React.FC = () => {
             lineHeight={['58px', '80px']}
             fontWeight="500"
           >
-            Sua nova
-            <b> Rede Social</b> favorita 🥰
+            Sua nova <br />
+            <b>Rede Social</b> favorita 🥰
           </Text>
 
           <Text pt="10px" opacity={0.7}>
