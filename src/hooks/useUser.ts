@@ -13,7 +13,7 @@ export const useUser = (username?: string) => {
   }
 }
 
-const GET_USER_QUERY = gql`
+export const GET_USER_QUERY = gql`
   query findPublicUserByUsername($username: String!) {
     findPublicUserByUsername(username: $username) {
       id
