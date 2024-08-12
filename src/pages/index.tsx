@@ -46,17 +46,19 @@ const App: React.FC = () => {
           </HStack>
 
           <Text
-            fontSize={['50px', '80px']}
-            lineHeight={['58px', '80px']}
+            fontSize={['64px', '80px']}
+            lineHeight={['72px', '80px']}
             fontWeight="500"
           >
-            Sua nova <br />
-            <b>Rede Social</b> favorita 🥰
+            <Text fontSize="48px">
+              A nova <br />
+            </Text>
+            <b>Rede Social Brasileira 🇧🇷</b>
           </Text>
 
           <Text pt="10px" opacity={0.7}>
-            Milhares de pessoas já estão usando o Spalhe, venha conhecer agora
-            mesmo!
+            Conheça novas pessoas, faça novas amizades e compartilhe seus
+            momentos com o mundo.
           </Text>
 
           <HStack pt="20px">
