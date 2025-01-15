@@ -14,7 +14,7 @@ import React from 'react'
 import { colors } from 'theme/colors'
 import { GraphqlClient } from '../services/graphql'
 
-export const runtime = 'edge';
+export const runtime = 'experimental-edge';
 
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   const username = ctx.params?.username
